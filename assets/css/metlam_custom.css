@@ -1,20 +1,377 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 body {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
+    /* font-family: "IBM Plex Sans", sans-serif; */
+
+    font-family: "Inter", sans-serif;
+        font-weight: 400;
+    font-size: 18px;
+    color: #000;
 }
 .container-fluid {
-padding:0px 100px;
+    padding: 0px 50px;
 }
 
-  
-  /* Hero section css starts */
+.container {
+  width: 1440px;
+}
 
-  .hero {
-   background-image: url('/assets/images/banner.jpeg'); 
-   height:100vh;
-   background-size: cover;
-   background-position-y:-160px ;
-  }
-  /* Hero Section css ends */
+/* navigation css starts */
+
+.navbar {
+
+font-size: 18px;
+font-weight: 600;
+line-height: 21px;
+letter-spacing: 0.03em;
+text-align: left;
+
+
+}
+.nav-link {
+  color: #fff !important;
+}
+/* navigation css ends */
+
+/* Hero section css starts */
+.hero {
+  background: 
+      linear-gradient(0deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
+      url('../images/banner.jpeg');
+  min-height: 100vh;
+  background-size: cover;
+  background-position-y: -160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero_footer {
+color: white;
+ font-size: 34px;
+ font-weight: 500;
+ line-height: 54px;
+ letter-spacing: 0.68px;
+}
+
+.hero_footer .col-md-3  {
+  border:  1px rgba(255, 255, 255, 0.30) solid;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.hero_footer .col-md-3:hover,.hero_footer .col-md-3:focus  {
+  border:  1px rgba(255, 255, 255, 0.30) inset;
+  background-color: #002156;
+  /* add a animation delay */
+  transition: background-color 0.8s ease;
+  border-top:6px solid #fff;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.hero nav {
+    width: 100%;
+}
+
+.hero_content {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.hero_content h1 {
+ color: white;
+ font-size: 68px;
+ font-weight: 500;
+ line-height: 1.2;
+ word-wrap: break-word
+}
+
+.hero_content p {
+ 
+  color: white;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 27px;
+   word-wrap: break-word
+}
+/* Hero Section css ends */
+
+/* btn css */
+
+.metlam-btn {
+padding: 8px 25px;
+border-radius: 40px;
+background: #002156;
+color: #fff;
+text-decoration: none;
+display: inline-block;
+font-weight: 500;
+width: fit-content;
+}
+
+.metlam-btn:hover, .metlam-btn:focus {
+background-color: #6DABE4;
+color: #fff;
+}
+
+/* btn css ends */
+
+/* section title css starts */
+
+section:not(.hero) {
+  padding-top: 120px;
+}
+
+
+.section_title {
+  color: #000;
+ 
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px; /* 125% */
+}
+
+/* section_title css ends */
+
+/* package_solutions css starts */
+
+
+.my-card-footer {
+  /* position at the bottom */
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  padding: 20px;
+
+  width: 100%;
+
+  color: #FFF;
+
+font-size: 22px;
+
+font-weight: 500;
+line-height: 1.5;
+text-transform: uppercase;
+text-align: left;
+}
+
+
+
+/* package solutions css ends */
+
+.my-card-1 {
+  position: relative; /* Allows absolute positioning of children */
+  display: inline-block; /* Adjust this based on your layout needs */
+}
+
+.my-card-1 .main_image:hover {
+  filter: blur(3.5px);
+  background: rgba(217, 217, 217, 0.01);
+}
+
+
+
+
+.overlay_image {
+  position: absolute;
+  top: 30px; /* 30px from the top */
+  right: 30px; /* 30px from the right */
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+}
+
+.hover_overlay_image {
+  display: none; /* Initially hidden, if you want to show it later on hover */
+}
+
+/* Example hover behavior for hover_overlay_image */
+.my-card-1:hover .hover_overlay_image {
+  display: block;
+  position: absolute;
+ top:30px;
+ right:30px;
+
+}
+
+.my-card-1:hover .overlay_image {
+  display: none;
+}
+
+.my-card-1:hover .my-card-footer {
+  font-size: 26px;
+  transition: font-size 0.1s ease;
+
+}
+
+.my-card-1 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Prevents the blur from affecting the edges */
+
+}
+
+.main_image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.my-card-1:not(:last-child) {
+  border-right: 2px solid white;
+}
+
+.my-card-1 .overlay_blue .main_image {
+ visibility: hidden;
+}
+
+.my-card-1 .overlay_blue:hover {
+  background-color: transparent;
+}
+.my-card-1 .overlay_blue:hover .main_image  {
+  visibility: visible;
+ }
+
+.my-card-1 .overlay_blue {
+background-color: #002156;
+position: relative;
+z-index: 99999;
+}
+
+/* categories section starts */
+
+.text-muted {
+  color: #6DABE4 !important;
+font-size: 18px;
+font-weight: 500;
+line-height: 18px; /* 100% */
+letter-spacing: 0.72px;
+text-transform: uppercase;
+}
+
+.home_categories .card {
+  background: #D9D9D9;
+  border: none;
+}
+
+.home_categories .card img {
+  border-radius: 10px;
+}
+
+/* categories section ends */
+
+/* owl carousel starts  */
+
+.owl-next, .owl-prev {
+  font-size: 20px !important;
+width:50px !important;
+height: 50px !important;
+border-radius: 10px !important;
+  margin-left:15px !important;
+  font-weight: 500;
+  line-height: 1.5;
+  background-color: #002156 !important;
+  color: #fff !important;
+}
+
+
+.owl-next:hover {
+  background-color: #6DABE4 !important;
+  color: #fff !important;
+} 
+
+ .owl-prev:hover {
+  background-color: #6DABE4 !important;
+  color: #fff !important;
+} 
+
+
+/* owl carousel ends */
+
+/* home catalogue section starts */
+
+.home_catalogue .bg-light {
+  background-color: #F5F5F5;
+ 
+}
+
+.home_catalogue .card {
+  border: none;
+}
+
+.home_catalogue .card .title {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  
+  background-color: #ffffff;
+   /* Center horizontally */
+   left: 50%;
+   transform: translateX(-50%);
+   width: max-content; /* Adjust width based on content */
+   padding: 5px 10px; /* Optional padding for better presentation */
+line-height: 36px; /* 138.462% */
+letter-spacing: 0.52px;
+text-transform: uppercase;
+
+  bottom: 10px;
+}
+
+.home_catalogue .card:hover .title {
+  background-color: #6DABE4;
+  color: #fff;
+}
+
+.home_catalogue .catalogue-right  {
+  background-image: url('/assets/images/catalog-right.png');
+  min-height: 652px;
+  width:auto;
+}
+.rounded {
+  border-radius: 10px;
+}
+/* home catalogue section ends */
+
+/* why metlam Section CSS starts */
+
+.why_metlam .cards_container {
+  border-top: 1px solid #6DABE4;
+  padding-top:50px; 
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+
+.why_metlam .cards_container .title {
+  color: #002156;
+ 
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 140% */
+  letter-spacing: 0.4px;
+}
+
+.why_metlam .video_cta {
+ height:521px;
+ background-image: url('/assets/images/video_cta.png');
+ background-position: 25% 25%;
+ background-size: cover;
+ padding: 100px;
+}
+
+.why_metlam .video_cta .content_area {
+  padding: 30px;
+
+background: rgba(255, 255, 255, 0.10);
+backdrop-filter: blur(5px);
+color: #fff;
+}
+
+
+/* why metlam section css ends */
