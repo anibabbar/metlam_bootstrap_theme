@@ -9,13 +9,22 @@ body {
         font-weight: 400;
     font-size: 18px;
     color: #000;
+
 }
+
+h1, h2, h3, h4, h5, h6, .ibm {
+  font-family: "IBM Plex Sans", sans-serif;
+} 
 .container-fluid {
     padding: 0px 50px;
 }
 
 .container {
   width: 1440px;
+}
+
+.card {
+  border:none !important;
 }
 
 /* navigation css starts */
@@ -45,6 +54,7 @@ text-align: left;
   background-position-y: -160px;
   display: flex;
   flex-direction: column;
+  background-color: #002156;
 }
 
 .hero_footer {
@@ -111,6 +121,7 @@ text-decoration: none;
 display: inline-block;
 font-weight: 500;
 width: fit-content;
+border:0px;
 }
 
 .metlam-btn:hover, .metlam-btn:focus {
@@ -118,22 +129,44 @@ background-color: #6DABE4;
 color: #fff;
 }
 
+.metlam-btn-alt {
+  padding: 8px 25px;
+border-radius: 40px;
+background: #6DABE4;;
+color: #fff;
+text-decoration: none;
+display: inline-block;
+font-weight: 500;
+/* width: fit-content; */
+border:0px;
+}
+
+.metlam-btn-alt:hover {
+
+background: #fff;;
+color: #002156;
+
+}
 /* btn css ends */
 
 /* section title css starts */
 
 section:not(.hero) {
   padding-top: 120px;
+  
+}
+.section_bottom {
+  padding-bottom: 120px;
 }
 
 
 .section_title {
   color: #000;
- 
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
   line-height: 50px; /* 125% */
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 /* section_title css ends */
@@ -257,11 +290,79 @@ text-transform: uppercase;
 .home_categories .card {
   background: #D9D9D9;
   border: none;
+  
+}
+.home_categories .card:hover {
+  background: #D9D9D9;
+  border: none;
+  padding:0;
+}
+.home_categories .title {
+  color: #000;
+font-size: 26px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px; /* 138.462% */
+letter-spacing: 0.52px;
+width:266px;
+}
+
+.home_categories .line-btn {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 2px solid #002156;
+  padding: 4px 0 4px;  /* Adjust padding to be uniform */
+  position: relative;   /* Add position relative for positioning context */
+
+  transition: padding 0.3s ease, top 0.3s ease, background 0.3s ease, color 0.3s ease; /* Add transitions for smooth animations */
+}
+
+.home_categories .card:hover .line-btn {
+  padding: 8px 25px;               /* Increased padding on hover */
+  border-radius: 40px;             /* Rounded corners on hover */
+  background: #002156;             /* Background color on hover */
+  color: #fff;                     /* Text color on hover */
+                     /* Move the button to the right */
+  top: 180px;                       /* Adjust the top position on hover */
+  text-decoration: none;           /* Ensure no text decoration on hover */
+  display: inline-block;           /* Inline-block for proper spacing */
+  /* width: fit-content;             */
+  border: 0;                       /* Remove border on hover */
+}
+
+.home_categories .card:hover .title {
+  display: none;
 }
 
 .home_categories .card img {
   border-radius: 10px;
 }
+
+.home_categories .hover_image {
+  display: none !important;
+  
+}
+
+.home_categories .card:hover .main_image {
+  display: none !important;
+}
+
+.home_categories .card:hover .hover_image {
+  display: block !important;
+}
+
+.home_categories .content {
+  position: absolute;
+  top: 30px;
+  left:30px;
+}
+
 
 /* categories section ends */
 
@@ -272,9 +373,10 @@ text-transform: uppercase;
 width:50px !important;
 height: 50px !important;
 border-radius: 10px !important;
-  margin-left:15px !important;
+  margin-right:15px !important;
   font-weight: 500;
   line-height: 1.5;
+  padding-left: 0px;;
   background-color: #002156 !important;
   color: #fff !important;
 }
@@ -314,7 +416,7 @@ border-radius: 10px !important;
    /* Center horizontally */
    left: 50%;
    transform: translateX(-50%);
-   width: max-content; /* Adjust width based on content */
+   width: max-content; 
    padding: 5px 10px; /* Optional padding for better presentation */
 line-height: 36px; /* 138.462% */
 letter-spacing: 0.52px;
@@ -339,6 +441,10 @@ text-transform: uppercase;
 /* home catalogue section ends */
 
 /* why metlam Section CSS starts */
+
+.why_metlam {
+ padding-bottom: 120px;
+}
 
 .why_metlam .cards_container {
   border-top: 1px solid #6DABE4;
@@ -375,3 +481,258 @@ color: #fff;
 
 
 /* why metlam section css ends */
+
+/* cta section starts */
+
+.cta_section .sub_title {
+
+font-size: 42px;
+font-weight: 600;
+line-height: 58px;
+letter-spacing: 0.02em;
+text-align: left;
+margin-bottom: 40px;
+text-transform: uppercase;
+color:#002156;
+margin-top:25px;
+margin-bottom: 40px;h
+}
+
+.cta_section {
+  background-color: #f5f5f5;
+  background-image: url('/assets/images/app_screenshot.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  /* background-position-x: 900px; */
+  background-size: 40%;
+  padding-bottom: 200px;
+ 
+}
+/* cta section ends */
+
+/* home_projects css starts */
+
+.home_projects {
+  padding-bottom: 120px;
+}
+
+.home_projects .view_project {
+  background-color: #fff;    /* White background */
+  width: 150px;              /* Set the width of the circle */
+  height: 150px;             /* Set the height of the circle (should be equal to width) */
+  border-radius: 50%;        /* Make the shape circular */
+  display: inline-block;     /* Ensure the circle keeps its shape */
+  text-align: center;
+  padding: 45px 30px; 
+  color:#061F5E;
+  letter-spacing: 0.36px;
+  font-weight: 500;
+position: absolute;
+right: 35px;
+bottom: 35px;
+}
+.home_projects .item:hover .view_project { 
+  background-color: #6DABE4;
+  color: #fff;
+}
+
+.home_projects .item {
+  width: 1055px;
+  border-radius: 10px;
+}
+
+.home_projects .owl-carousel {
+  margin-top: 30px;
+}
+.home_projects img {
+  border-radius: 10px;
+  max-height: 500px;
+}
+
+.home_projects .project_title {
+  display: none;
+}
+.home_projects .item .project_title {
+  display: flex;
+  justify-content: center;       /* Horizontally centers content */
+  align-items: center;           /* Vertically centers content */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #061F5E;     /* Background color */
+  color: #fff;                   /* Text color */
+  padding: 30px;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  width: 360px;                  /* Set the content width */
+  letter-spacing: 0.8px;
+  transform-origin: top left;    /* Start animation from top-left corner */
+  transform: scale(0);           /* Initially shrink the background */
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.home_projects .item:hover .project_title {
+  transform: scale(1);           /* Expand the background to full size on hover */
+}
+
+.owl-nav.disabled {
+  display: block !important;
+  text-align: left;
+  padding: 0px;
+  margin-top:35px;
+}
+
+.owl-nav {
+  margin-top: 35px;
+}
+
+.owl-theme .owl-nav [class*='owl-'] { 
+  margin: 0px;
+}
+/* home_projects css ends */
+
+/* footer css starts */
+
+footer {
+  background-image: url(/assets/images/metlam-blue-shape\ 1.png);
+  background-repeat: no-repeat;
+  background-color:#F5F5F5;
+  padding:120px 0px;
+}
+
+.widget_title {
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: 7px 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+background: var(--Color-2, #6DABE4);
+color: #FFF;
+font-size:16px;
+font-weight: 500;
+line-height: 16px; /* 100% */
+letter-spacing: 0.32px;
+text-transform: uppercase;
+display: inline-block;
+margin-bottom: 25px;
+}
+footer li {
+  list-style: none;
+  padding-bottom: 10px;
+  color: #000;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 173.333% */
+}
+footer ul , footer ol {
+  padding-left: 0;
+  margin-left 0;
+}
+
+.widget_content ul li:hover {
+  color: #000;  /* Highlight the hovered item in a different color */
+}
+
+.footer_form {
+  background-color:#061F5E ;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+
+
+footer .bigger_text {
+  color: #6DABE4;
+
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 38px; /* 158.333% */
+letter-spacing: 0.96px;
+}
+
+.highlight {
+  color:#061F5E;
+}
+.form-control {
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+input::placeholder {
+  color:#000 !important;
+}
+
+.copyright {
+  color: #6DABE4;
+text-align: left;
+
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 162.5% */
+}
+
+.copyright img {
+  position:relative;
+  top:-2px;
+}
+/* footer css ends */
+
+/* categories pages */ 
+
+.hero_inner {
+  min-height: auto;
+  border-radius: 0px 0px 30px 30px;
+  background-color: #002156;
+}
+
+.hero_inner .hero_content {
+  padding-top: 100px;
+  padding-bottom:40px;
+ 
+  
+}
+
+.intro_bg_blue {
+  background-color: #002156;
+  color: #FFF;
+  padding: 120px 0px;
+
+}
+
+.main_content {
+  border-radius: 30px 30px 00px 00px;
+}
+
+.category_card {
+  background-color: #f5f5f5 ;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+}
+
+.category_card .title, .category_card .title a {
+  font-size:18px;
+ font-weight: 500;
+ color: #000;
+ text-transform: uppercase;
+ margin-bottom: 20px;
+}
+
+.category_card .footer_count {
+font-size:16px;
+margin-top:20px;
+margin-bottom: 0;
+}
+
+
+
+/* categories page */
+

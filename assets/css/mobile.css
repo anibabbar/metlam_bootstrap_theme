@@ -1,7 +1,31 @@
 @media only screen and (max-width: 768px) {
 
+    .navbar-toggler-icon {
+        color:#f5f5f5;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+      }
+
+      .navbar-light .navbar-toggler {
+        color: #fff;
+        border-color: #fff;
+      }
+    .navbar-brand img {
+        width: 150px;
+    }
+
+    .container {
+        padding: 0 20px;
+        width: 100%;
+    }
+    .container-fluid {
+        padding: 0 20px;
+        width: 100%;
+    }
     .hero_content {
-        text-align: center;
+        /* text-align: center; */
     }
   
     .hero_content h1 {
@@ -15,8 +39,83 @@
 
     .hero_footer {
         color: white;
-         font-size: 24px;   
+         font-size: 20px;   
          line-height: 30px;
     }
+    .hero_footer img {
+        width:30px;
+    }
+    .hero_footer .col-md-3 {
+        text-align: left;
+        padding: 15px;
+    }
+
+    .section_title {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; /* 125% */
+        font-family: "IBM Plex Sans", sans-serif;
+      }
+
+      section:not(.hero) {
+        padding-top: 60px;
+      }
+      
+      .home_categories .card {
+        width:465px;
+      }
+      .home_catalogue .card {
+        margin-bottom: 20px;
+      }
+
+
+      .home_catalogue .card .title {
+      
+         width: auto;
+         margin-top: 20px !important;
+       
+        font-size:20px;
+      
+        bottom: 10px;
+      }
+
+      
+      .why_metlam .cards_container .row {
         
+        background-color: #f5f5f5;
+
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .why_metlam .cards_container img {
+        margin-bottom: 10px;
+      }
+
+      .why_metlam .video_cta {
+        padding: 30px;
+      }
+
+
+      .home_projects .item {
+        width: 100%;
+        height: 300px;
+      }
+
+      .home_projects .view_project {
+        background-color: #fff;    /* White background */
+        padding: 45px 30px; 
+        color:#061F5E;
+        letter-spacing: 0.36px;
+        font-weight: 500;
+        z-index: 99999;
+        position: normal;
+      }
+    
+
+      footer {
+        padding: 60px 0 20px 0 ; 
+      }
 }
